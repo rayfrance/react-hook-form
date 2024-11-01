@@ -37,13 +37,13 @@ function FormularioCadastro() {
 
         {/* Campo Nome */}
         <TextField
-          {...register("name")} // Registra o campo para o React Hook Form
+          {...register("nome")} // Registra o campo para o React Hook Form
           label="Nome"
           variant="outlined"
           fullWidth
           margin="normal"
-          error={!!errors.name} // Exibe erro se houver
-          helperText={errors.name?.message} // Mensagem de erro
+          error={!!errors.nome} // Exibe erro se houver
+          helperText={errors.nome?.message} // Mensagem de erro
         />
 
         {/* Campo Email */}
@@ -56,6 +56,20 @@ function FormularioCadastro() {
           error={!!errors.email}
           helperText={errors.email?.message}
         />
+
+        {/* Campo Idade */
+        /*<TextField
+          {...register("idade")}
+          label="Idade"
+          type="number"
+          variant="outlined"
+          fullWidth
+          margin="normal"
+          error={!!errors.idade}
+          helperText={errors.idade?.message}
+        />*/
+        }
+        
 
         {/* Campo Senha */}
         <TextField
@@ -107,7 +121,7 @@ function FormularioCadastro() {
       {submittedData && (
         <Box mt={4} p={3} border={1} borderColor="grey.300" borderRadius={2} bgcolor="#f9f9f9">
           <Typography variant="h6" gutterBottom>Dados Enviados:</Typography>
-          <Typography><strong>Nome:</strong> {submittedData.name}</Typography>
+          <Typography><strong>Nome:</strong> {submittedData.nome}</Typography>
           <Typography><strong>Email:</strong> {submittedData.email}</Typography>
         </Box>
       )}
