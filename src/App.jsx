@@ -3,6 +3,7 @@ import React from "react";
 import { ThemeProvider, CssBaseline, Container, Box } from "@mui/material";
 import FormularioCadastro from "./components/FormularioCadastro";
 import theme from "./utils/theme";
+import ExemploGridFlexbox from "./components/ExemploGridFlexbox";
 
 function App() {
   return (
@@ -26,9 +27,12 @@ function App() {
             bgcolor: "#fff",
           }}
         >
-          <FormularioCadastro />
+          <FormularioCadastro />                      
         </Container>
       </Box>
+      <Container>
+      <ExemploGridFlexbox /> 
+      </Container>
     </ThemeProvider>
   );
 }
